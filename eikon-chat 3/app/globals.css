@@ -1,0 +1,222 @@
+/* ==========================================================================
+   Eikon Chat — Design tokens
+   Tema claro  = Direção A · Precisão  (Plus Jakarta Sans + JetBrains Mono)
+   Tema escuro = Direção C · Preto e branco (Geist + Geist Mono)
+   Cores em RGB "r g b" para funcionar com opacidade do Tailwind (bg-primary/20).
+   Contraste AA verificado: texto ≥ 4,5:1 em todos os pares de uso.
+   ========================================================================== */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root, .light {
+    --background: 247 249 253;  /* #F7F9FD */
+    --foreground: 11 27 63;  /* #0B1B3F */
+    --panel: 255 255 255;  /* #FFFFFF */
+    --card: 255 255 255;  /* #FFFFFF */
+    --card-foreground: 11 27 63;  /* #0B1B3F */
+    --primary: 31 79 224;  /* #1F4FE0 */
+    --primary-hover: 26 68 196;  /* #1A44C4 */
+    --primary-foreground: 255 255 255;  /* #FFFFFF */
+    --secondary: 255 255 255;  /* #FFFFFF */
+    --secondary-foreground: 11 27 63;  /* #0B1B3F */
+    --muted: 238 242 250;  /* #EEF2FA */
+    --muted-foreground: 75 93 128;  /* #4B5D80 */
+    --subtle-foreground: 58 74 107;  /* #3A4A6B */
+    --accent: 234 240 254;  /* #EAF0FE */
+    --accent-foreground: 26 58 158;  /* #1A3A9E */
+    --accent-ring: 201 214 245;  /* #C9D6F5 */
+    --border: 226 232 243;  /* #E2E8F3 */
+    --input: 213 222 238;  /* #D5DEEE */
+    --ring: 31 79 224;  /* #1F4FE0 */
+    --link: 31 79 224;  /* #1F4FE0 */
+    --spotlight: 255 255 255;  /* #FFFFFF */
+    --spotlight-foreground: 11 27 63;  /* #0B1B3F */
+    --spotlight-muted: 75 93 128;  /* #4B5D80 */
+    --spotlight-border: 226 232 243;  /* #E2E8F3 */
+    --avatar: 31 79 224;  /* #1F4FE0 */
+    --avatar-foreground: 255 255 255;  /* #FFFFFF */
+    --success: 22 163 74;  /* #16A34A */
+    --success-bg: 231 246 236;  /* #E7F6EC */
+    --success-fg: 17 98 47;  /* #11622F */
+    --warning: 217 119 6;  /* #D97706 */
+    --warning-bg: 254 243 226;  /* #FEF3E2 */
+    --warning-fg: 138 75 6;  /* #8A4B06 */
+    --danger: 220 38 38;  /* #DC2626 */
+    --danger-bg: 253 236 236;  /* #FDECEC */
+    --danger-fg: 161 29 29;  /* #A11D1D */
+    --info: 31 79 224;  /* #1F4FE0 */
+    --info-bg: 234 240 254;  /* #EAF0FE */
+    --info-fg: 26 58 158;  /* #1A3A9E */
+    --chart-1: 31 79 224;  /* #1F4FE0 */
+    --chart-2: 6 182 212;  /* #06B6D4 */
+    --chart-3: 201 214 245;  /* #C9D6F5 */
+    --chart-4: 11 27 63;  /* #0B1B3F */
+    --chart-5: 117 134 166;  /* #7586A6 */
+    --chart-peak: 31 79 224;  /* #1F4FE0 */
+    --n-50: 247 249 253;  /* #F7F9FD */
+    --n-100: 238 242 250;  /* #EEF2FA */
+    --n-200: 226 232 243;  /* #E2E8F3 */
+    --n-300: 213 222 238;  /* #D5DEEE */
+    --n-400: 169 182 207;  /* #A9B6CF */
+    --n-500: 117 134 166;  /* #7586A6 */
+    --n-600: 75 93 128;  /* #4B5D80 */
+    --n-700: 58 74 107;  /* #3A4A6B */
+    --n-800: 28 44 82;  /* #1C2C52 */
+    --n-900: 11 27 63;  /* #0B1B3F */
+
+    /* Tipografia */
+    --font-sans: "Plus Jakarta Sans Variable", "Plus Jakarta Sans", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono Variable", "JetBrains Mono", ui-monospace, monospace;
+    --heading-weight: 800;
+    --kpi-weight: 700;
+
+    /* Forma */
+    --radius: 10px;
+
+    /* Elevação — sombras azuladas (A) */
+    --shadow-e1: 0 1px 2px rgb(11 27 63 / .05);
+    --shadow-e2: 0 1px 2px rgb(11 27 63 / .05), 0 12px 28px -14px rgb(11 27 63 / .22);
+    --shadow-e3: 0 2px 6px rgb(11 27 63 / .06), 0 28px 60px -24px rgb(11 27 63 / .30);
+    --shadow-brand: inset 0 1px 0 rgb(255 255 255 / .22), 0 8px 20px -10px rgb(31 79 224 / .8);
+
+    /* Fundos de marca */
+    --app-bg: radial-gradient(1000px 640px at 90% -10%, rgb(31 79 224 / .07), transparent 62%), rgb(var(--background));
+    --sidebar-bg: rgb(255 255 255);
+    --logo-tile: linear-gradient(160deg, #2B5DF0 0%, #1F4FE0 45%, #0B1B3F 100%);
+    --logo-bar-1: #FFFFFF; --logo-bar-2: #FFFFFF; --logo-bar-3: rgb(255 255 255 / .6);
+    --needle: linear-gradient(90deg, #0B1B3F 0%, #1F4FE0 60%, #06B6D4 92%, transparent 100%);
+
+    /* Motion */
+    --ease-out: cubic-bezier(.22, 1, .36, 1);
+    --dur-fast: 150ms; --dur-base: 200ms; --dur-slow: 300ms; --dur-count: 1300ms;
+
+    color-scheme: light;
+  }
+
+  .dark, .force-dark {
+    --background: 10 13 20;  /* #0A0D14 */
+    --foreground: 232 236 244;  /* #E8ECF4 */
+    --panel: 12 16 24;  /* #0C1018 */
+    --card: 16 20 29;  /* #10141D */
+    --card-foreground: 232 236 244;  /* #E8ECF4 */
+    --primary: 47 95 232;  /* #2F5FE8 */
+    --primary-hover: 58 107 245;  /* #3A6BF5 */
+    --primary-foreground: 255 255 255;  /* #FFFFFF */
+    --secondary: 21 26 37;  /* #151A25 */
+    --secondary-foreground: 232 236 244;  /* #E8ECF4 */
+    --muted: 21 26 37;  /* #151A25 */
+    --muted-foreground: 133 144 164;  /* #8590A4 */
+    --subtle-foreground: 163 173 194;  /* #A3ADC2 */
+    --accent: 21 28 46;  /* #151C2E */
+    --accent-foreground: 232 236 244;  /* #E8ECF4 */
+    --accent-ring: 36 48 74;  /* #24304A */
+    --border: 30 37 51;  /* #1E2533 */
+    --input: 35 43 59;  /* #232B3B */
+    --ring: 143 176 255;  /* #8FB0FF */
+    --link: 143 176 255;  /* #8FB0FF */
+    --spotlight: 232 236 244;  /* #E8ECF4 */
+    --spotlight-foreground: 10 13 20;  /* #0A0D14 */
+    --spotlight-muted: 74 85 104;  /* #4A5568 */
+    --spotlight-border: 201 208 222;  /* #C9D0DE */
+    --avatar: 255 255 255;  /* #FFFFFF */
+    --avatar-foreground: 47 95 232;  /* #2F5FE8 */
+    --success: 126 219 164;  /* #7EDBA4 */
+    --success-bg: 18 48 31;  /* #12301F */
+    --success-fg: 126 219 164;  /* #7EDBA4 */
+    --warning: 242 180 92;  /* #F2B45C */
+    --warning-bg: 51 39 15;  /* #33270F */
+    --warning-fg: 242 194 122;  /* #F2C27A */
+    --danger: 255 138 128;  /* #FF8A80 */
+    --danger-bg: 58 21 24;  /* #3A1518 */
+    --danger-fg: 255 138 128;  /* #FF8A80 */
+    --info: 169 191 255;  /* #A9BFFF */
+    --info-bg: 20 32 74;  /* #14204A */
+    --info-fg: 185 204 255;  /* #B9CCFF */
+    --chart-1: 47 95 232;  /* #2F5FE8 */
+    --chart-2: 143 176 255;  /* #8FB0FF */
+    --chart-3: 42 51 68;  /* #2A3344 */
+    --chart-4: 10 13 20;  /* #0A0D14 */
+    --chart-5: 163 173 194;  /* #A3ADC2 */
+    --chart-peak: 10 13 20;  /* #0A0D14 */
+    --n-50: 10 13 20;  /* #0A0D14 */
+    --n-100: 16 20 29;  /* #10141D */
+    --n-200: 30 37 51;  /* #1E2533 */
+    --n-300: 42 51 68;  /* #2A3344 */
+    --n-400: 58 68 87;  /* #3A4457 */
+    --n-500: 91 102 124;  /* #5B667C */
+    --n-600: 133 144 164;  /* #8590A4 */
+    --n-700: 163 173 194;  /* #A3ADC2 */
+    --n-800: 201 208 222;  /* #C9D0DE */
+    --n-900: 232 236 244;  /* #E8ECF4 */
+
+    --font-sans: var(--font-geist-sans), "Geist", system-ui, sans-serif;
+    --font-mono: var(--font-geist-mono), "Geist Mono", ui-monospace, monospace;
+    --heading-weight: 600;
+    --kpi-weight: 600;
+
+    --shadow-e1: inset 0 1px 0 rgb(255 255 255 / .03);
+    --shadow-e2: inset 0 1px 0 rgb(255 255 255 / .03), 0 16px 40px -20px rgb(0 0 0 / .8);
+    --shadow-e3: 0 0 0 1px rgb(255 255 255 / .06), 0 24px 50px -24px rgb(0 0 0 / .9);
+    --shadow-brand: inset 0 1px 0 rgb(255 255 255 / .16), 0 8px 20px -10px rgb(47 95 232 / .8);
+
+    --app-bg: rgb(var(--background));
+    --sidebar-bg: linear-gradient(180deg, #0A0D15 0%, rgb(11 25 67 / .75) 50%, #0A0D15 63%, #111422 69%, #0C1018 75%, rgb(25 30 49 / .34) 100%);
+    --logo-tile: #FFFFFF;
+    --logo-bar-1: #2F5FE8; --logo-bar-2: #1949D4; --logo-bar-3: rgb(72 108 210 / .56);
+    --needle: linear-gradient(90deg, #FFFFFF 0%, #8FB0FF 60%, #2F5FE8 92%, transparent 100%);
+
+    color-scheme: dark;
+  }
+
+  * { @apply border-border; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background: var(--app-bg);
+    font-feature-settings: "tnum" 1, "cv11" 1;
+    min-height: 100vh;
+  }
+  :focus-visible { outline: 2px solid rgb(var(--ring)); outline-offset: 2px; border-radius: 6px; }
+  ::selection { background: rgb(var(--primary) / .22); }
+  * { scrollbar-width: thin; scrollbar-color: rgb(var(--n-300)) transparent; }
+  input::placeholder, textarea::placeholder { color: rgb(var(--muted-foreground)); opacity: 1; }
+}
+
+@layer components {
+  /* Títulos: 800 no claro (A), 600 no escuro (C) */
+  .heading { font-weight: var(--heading-weight); }
+  .kpi-num { font-weight: var(--kpi-weight); font-variant-numeric: tabular-nums; }
+  .label-mono { @apply font-mono text-[11px] font-medium uppercase tracking-[.08em] text-muted-foreground; }
+
+  /* Fundo hachurado de 1px a 135° (motivo "traço de agulha") */
+  .hatch {
+    background-image: repeating-linear-gradient(135deg, rgb(var(--primary) / .08) 0 1px, transparent 1px 14px);
+  }
+  .dark .hatch { background-image: repeating-linear-gradient(135deg, rgb(255 255 255 / .05) 0 1px, transparent 1px 14px); }
+  .needle { height: 2px; border-radius: 2px; background: var(--needle); }
+
+  .select-chevron {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237586A6' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 10px center; background-size: 16px;
+  }
+
+  .skeleton { @apply relative overflow-hidden rounded-md bg-muted; }
+  .skeleton::after {
+    content: ""; position: absolute; inset: 0; transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, rgb(var(--n-50) / .6), transparent);
+    animation: shimmer 1.6s infinite;
+  }
+  .dark .skeleton::after { background: linear-gradient(90deg, transparent, rgb(255 255 255 / .05), transparent); }
+}
+
+@layer utilities {
+  .draw-line { stroke-dashoffset: 1; animation: draw 1.4s var(--ease-out) .1s forwards; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .draw-line { stroke-dashoffset: 0; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
